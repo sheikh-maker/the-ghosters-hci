@@ -1,0 +1,53 @@
+.kiosk-tool[aria-pressed="true"] {
+  background: #e7f0e2;
+  color: #244d31;
+  border-color: #a9c39d;
+}
+
+.kiosk-demo.reach-mode .kiosk-layout {
+  grid-template-columns: 1fr;
+}
+
+.kiosk-demo.reach-mode .basket-panel {
+  order: 1;
+  border-left: 0;
+  border-top: 1px solid #dce4da;
+  background: #eef4e9;
+}
+
+.kiosk-demo.reach-mode .product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.kiosk-demo.reach-mode .catalog-panel,
+.kiosk-demo.reach-mode .basket-panel {
+  padding: 17px 20px;
+}
+
+.kiosk-demo.reach-mode .review-button,
+.kiosk-demo.reach-mode .quantity-control button,
+.kiosk-demo.reach-mode .remove-item,
+.kiosk-demo.reach-mode .add-product {
+  min-height: 44px;
+}
+
+.kiosk-demo.reach-mode .basket-item {
+  padding: 14px;
+}
+
+.kiosk-demo .kiosk-status {
+  min-height: 38px;
+  padding: 9px 12px;
+  border: 1px solid #c4d5be;
+  border-radius: 9px;
+  background: #eef4e9;
+  color: #284c32;
+  font: 600 12px/1.5 var(--font-body);
+}
+
+@media (max-width: 540px) {
+  .kiosk-demo.reach-mode .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
