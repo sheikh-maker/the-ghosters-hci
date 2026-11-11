@@ -312,3 +312,60 @@
 .sdg-card.sdg-9 {
   border-color: #e08a3c;
 }
+/* ===== Four problem cards (Project 1 · 01 / Problem space) ===== */
+/* Paste this at the very end of your CSS file so it overrides the older 3-card grid. */
+
+.project-one .problem-grid.problem-grid-four {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.problem-grid-four .problem-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: auto;
+}
+
+.problem-grid-four .problem-card > p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* Bullet lists for "Design principles violated" and "Usability goals affected" */
+.problem-grid-four .problem-detail {
+  display: block;
+}
+
+.problem-grid-four .problem-detail strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.problem-grid-four .problem-detail ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.problem-grid-four .problem-detail li {
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.problem-grid-four .problem-detail li b {
+  color: var(--ink);
+}
+
+/* Push the solution box to the bottom so both cards in a row line up */
+.problem-grid-four .impact-line {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .project-one .problem-grid.problem-grid-four {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
