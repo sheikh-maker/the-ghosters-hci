@@ -245,3 +245,26 @@
   font-size: 30px;
   letter-spacing: .20em;
 }
+/* Self Kiosk Steps heading */
+.project-one .flow-title {
+  font: 700 26px var(--font-display);
+  letter-spacing: -.04em;
+  text-align: center;
+  margin: 37px 0 0;
+  color: var(--ink);
+}
+
+.flow-title + .flow-strip {
+  margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+  .flow-strip {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+}
