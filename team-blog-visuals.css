@@ -369,3 +369,8 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* "02 / User experience" label, same size as Problem space */
+#p1-experience .ux-heading .eyebrow {
+  font-size: 30px;
+  letter-spacing: .20em;
+}
