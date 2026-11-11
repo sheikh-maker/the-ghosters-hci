@@ -221,8 +221,26 @@
     height: 220px;
   }
 }
+/* Team group photograph and user-provided supermarket kiosk photographs */
+.p0-photo-slot.group-photo-card{gap:0;padding:27px;background:linear-gradient(145deg,#e8eee4,#f4eee4);border:1px solid rgba(49,92,76,.18)}
+.group-photo-card .slot-label{margin:0 0 18px;color:#627268}
+.group-photo-image{display:block;width:100%;max-width:100%;aspect-ratio:2/1;object-fit:cover;object-position:center;border-radius:16px;box-shadow:0 10px 25px rgba(32,56,46,.14)}
+.group-photo-card h3{font-size:clamp(25px,3vw,38px)!important;line-height:1.08!important;margin-top:18px!important}
+.group-photo-card h3 em{font-style:normal;color:#e28b5d}
+.photo-slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+.evidence-photo{min-width:0;width:100%;margin:0;overflow:hidden;border-radius:18px;background:#fff;border:1px solid rgba(32,56,46,.09);box-shadow:0 12px 32px rgba(32,56,46,.08)}
+.evidence-photo img{display:block;width:100%;max-width:100%;height:245px;object-fit:cover;object-position:center}
+.evidence-photo figcaption{display:grid;gap:6px;padding:15px 16px 17px}
+.evidence-photo figcaption b{font:600 15px var(--font-display);letter-spacing:-.025em;color:#263a30}
+.evidence-photo figcaption span{font-size:11px;line-height:1.6;color:#68766e}
+.team-photo-slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.team-photo-slots .evidence-photo img{height:340px;object-fit:contain;background:#e8e6df}
+.team-field-evidence{margin-top:30px;padding-top:38px;border-top:1px solid rgba(32,56,46,.12)}
+@media(max-width:900px){.team-photo-slots{grid-template-columns:repeat(2,minmax(0,1fr))}.team-photo-slots .evidence-photo img{height:300px}}
+@media(max-width:560px){.team-photo-slots{grid-template-columns:minmax(0,1fr)}.team-photo-slots .evidence-photo img{height:auto;max-height:78vh;min-height:0;object-fit:contain}}
+@media(max-width:760px){.photo-slots{grid-template-columns:minmax(0,1fr)}.evidence-photo img{height:230px}.group-photo-card{min-height:0;padding:22px!important}.group-photo-image{aspect-ratio:1.7/1}}
 
-/* Bigger "01 / Problem space" section */
+/* ===== Bigger "01 / Problem space" section ===== */
 #p1-context.subsection-heading {
   max-width: 1000px;
 }
@@ -247,21 +265,3 @@
     font-size: 16px;
   }
 }
-/* Team group photograph and user-provided supermarket kiosk photographs */
-.p0-photo-slot.group-photo-card{gap:0;padding:27px;background:linear-gradient(145deg,#e8eee4,#f4eee4);border:1px solid rgba(49,92,76,.18)}
-.group-photo-card .slot-label{margin:0 0 18px;color:#627268}
-.group-photo-image{display:block;width:100%;max-width:100%;aspect-ratio:2/1;object-fit:cover;object-position:center;border-radius:16px;box-shadow:0 10px 25px rgba(32,56,46,.14)}
-.group-photo-card h3{font-size:clamp(25px,3vw,38px)!important;line-height:1.08!important;margin-top:18px!important}
-.group-photo-card h3 em{font-style:normal;color:#e28b5d}
-.photo-slots{grid-template-columns:repeat(3,minmax(0,1fr))}
-.evidence-photo{min-width:0;width:100%;margin:0;overflow:hidden;border-radius:18px;background:#fff;border:1px solid rgba(32,56,46,.09);box-shadow:0 12px 32px rgba(32,56,46,.08)}
-.evidence-photo img{display:block;width:100%;max-width:100%;height:245px;object-fit:cover;object-position:center}
-.evidence-photo figcaption{display:grid;gap:6px;padding:15px 16px 17px}
-.evidence-photo figcaption b{font:600 15px var(--font-display);letter-spacing:-.025em;color:#263a30}
-.evidence-photo figcaption span{font-size:11px;line-height:1.6;color:#68766e}
-.team-photo-slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.team-photo-slots .evidence-photo img{height:340px;object-fit:contain;background:#e8e6df}
-.team-field-evidence{margin-top:30px;padding-top:38px;border-top:1px solid rgba(32,56,46,.12)}
-@media(max-width:900px){.team-photo-slots{grid-template-columns:repeat(2,minmax(0,1fr))}.team-photo-slots .evidence-photo img{height:300px}}
-@media(max-width:560px){.team-photo-slots{grid-template-columns:minmax(0,1fr)}.team-photo-slots .evidence-photo img{height:auto;max-height:78vh;min-height:0;object-fit:contain}}
-@media(max-width:760px){.photo-slots{grid-template-columns:minmax(0,1fr)}.evidence-photo img{height:230px}.group-photo-card{min-height:0;padding:22px!important}.group-photo-image{aspect-ratio:1.7/1}}
