@@ -242,6 +242,6 @@
 
 /* ===== Slightly bigger "01 / Problem space" label ===== */
 #p1-context .eyebrow {
-  font-size: 14px;
-  letter-spacing: .18em;
+  font-size: 30px;
+  letter-spacing: .20em;
 }
