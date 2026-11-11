@@ -225,19 +225,6 @@
 
 </div>
 
-        <!-- ============================================================
-     In index.html, select everything from the line  <style>  (right after the
-     problem cards' closing </div>)  down to the </div> that closes
-     <div class="ux-section" id="p1-experience">, which is the line just before
-     <div class="solution-section" id="p1-solution">.
-     Replace it all with this block.
-
-     Fixed:
-     1. Removed the rotate(180deg) rule (photos 1 and 2 are now the right way up).
-     2. Added the missing </div> that closes ux-section.
-     3. Fixed the typo "have not scan" -> "have not scanned".
-     4. Swapped the card 1 and card 2 image files back so each matches its text and alt text.
-     ============================================================ -->
 
 <style>
 /* ===== User experience: photo cards (3 per row) ===== */
@@ -398,43 +385,127 @@
   </div> <!-- closes ux-photo-list -->
 </div> <!-- closes ux-section -->
         
-        <div class="solution-section" id="p1-solution">
-          <div class="solution-heading"><p class="eyebrow">03 / Proposed solution</p><h3>Meet <em>Grace MarketMate.</em></h3><p>A supermarket self-checkout concept that keeps the next step clear, makes basket edits forgiving, and lets shoppers listen to spoken guidance if they want it.</p></div>
-          <div class="solution-map">
-            <article><span>Problem 01</span><h4>Too much at once</h4><p><b>→</b> Focus item search. Show essential information first and keep promotional prompts optional.</p></article>
-            <article><span>Problem 02</span><h4>Hard to recover</h4><p><b>→</b> Edit quantities, remove an item, and undo the last change directly in the basket.</p></article>
-            <article><span>Problem 03</span><h4>Hard to reach or read</h4><p><b>→</b> Offer a reach-friendly layout that groups key actions in a full-width lower panel, with larger controls, strong contrast, clear tap confirmation, and optional voice narration. Pair it with an adjustable, tilting display mount where the kiosk hardware allows it.</p></article>
-          </div>
+    <!-- ============================================================
+     In index.html, inside <div class="solution-section" id="p1-solution">:
+     REPLACE only these two blocks:
+        <div class="solution-heading"> ... </div>
+        <div class="solution-map"> ... </div>
+     with everything below (from the <style> to the last </div>).
 
-          <div class="prototype-intro" id="prototype"><div><p class="eyebrow">Concept interface · Try it</p><h3>From scan to<br /><em>sure of your basket.</em></h3></div><p>This browser prototype uses sample items only. It does not scan barcodes, contact a store, or take payment.</p></div>
-          <div class="kiosk-demo" id="kiosk-demo">
-            <div class="kiosk-topbar"><div class="kiosk-brand"><span class="kiosk-mark">GM</span><div><b>Grace MarketMate</b><small>Self-checkout concept</small></div></div><div class="kiosk-tools"><label class="language-label" for="narrator-language">Voice language</label><select id="narrator-language" aria-label="Voice guidance language"><option value="en-US">English</option><option value="ms-MY">Bahasa Melayu</option></select><button class="kiosk-tool" id="contrast-toggle" type="button" aria-pressed="false">◐ <span>Contrast</span></button><button class="kiosk-tool" id="text-toggle" type="button" aria-pressed="false">Aa <span>Text size</span></button><button class="kiosk-tool" id="reach-toggle" type="button" aria-pressed="false">↕ <span>Reach layout</span></button></div></div>
-            <div class="kiosk-progress"><span class="progress-step is-current"><i>1</i> Add items</span><span class="progress-connector"></span><span class="progress-step"><i>2</i> Review basket</span><span class="progress-connector"></span><span class="progress-step"><i>3</i> Checkout</span></div>
-            <div class="kiosk-layout">
-              <section class="catalog-panel" aria-labelledby="catalog-title">
-                <div class="catalog-heading"><div><p class="eyebrow">Step 1 of 3</p><h4 id="catalog-title">Add your items</h4></div><button class="scan-badge" id="sample-scan" type="button"><i></i> Try a sample scan</button></div>
-                <p class="catalog-help" id="kiosk-help">Scan a product or find it below. You can review every item before checkout.</p>
-                <label class="search-label" for="product-search">Find a product</label>
-                <div class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Try “milk” or “banana”" autocomplete="off" /><kbd>⌕</kbd></div>
-                <div class="category-row" aria-label="Product categories"><button class="category-chip is-selected" type="button" data-category="all" aria-pressed="true">All items</button><button class="category-chip" type="button" data-category="produce" aria-pressed="false">Produce</button><button class="category-chip" type="button" data-category="pantry" aria-pressed="false">Pantry</button><button class="category-chip" type="button" data-category="chilled" aria-pressed="false">Chilled</button></div>
-                <div class="product-grid" id="product-grid" aria-label="Sample products"></div>
-                <p class="empty-search" id="empty-search" hidden>No products match that search. Try a different name.</p>
-              </section>
-              <aside class="basket-panel" aria-labelledby="basket-title">
-                <div class="basket-heading"><div><p class="eyebrow">Step 2 · You can edit anytime</p><h4 id="basket-title">Your basket <span class="basket-count" id="basket-count">0</span></h4></div><span class="basket-icon" aria-hidden="true">▧</span></div>
-                <div class="basket-items-list" id="basket-items" aria-live="polite"></div>
-                <div class="basket-empty" id="basket-empty"><span aria-hidden="true">＋</span><b>Your basket is empty</b><small>Add a sample item to see it here.</small></div>
-                <div class="undo-row"><button class="undo-button" id="undo-button" type="button" disabled>↶ Undo last change</button><span id="undo-hint">Nothing to undo</span></div>
-                <div class="basket-total"><span>Estimated total</span><strong id="basket-total">RM 0.00</strong></div>
-                <button class="review-button" id="review-button" type="button">Review basket <span aria-hidden="true">→</span></button>
-                <div class="narrator-row"><button class="narrator-toggle" id="narrator-toggle" type="button" aria-pressed="false"><span class="speaker-icon" aria-hidden="true">◖))</span><span><b>Voice guidance</b><small>Optional · off</small></span><span class="switch" aria-hidden="true"></span></button><button class="repeat-button" id="repeat-button" type="button" aria-label="Read this step aloud">↻</button></div>
-                <p class="kiosk-status" id="kiosk-status" role="status" aria-live="polite">Demo mode · No real checkout or payment</p>
-              </aside>
-            </div>
-            <div class="kiosk-footer"><span>Concept prototype · Sample prices only</span><span>Clear steps. Easy changes. Your pace.</span></div>
-          </div>
-          <p class="prototype-caption">The prototype illustrates the proposed interaction. It is not connected to a store kiosk or payment service.</p>
-        </div>
+     Keep the line  <div class="solution-section" id="p1-solution">  and everything
+     after the solution-map (the prototype-intro, kiosk-demo and caption) as it is.
+     See my note in the chat about the GraceMarketMate prototype.
+     ============================================================ -->
+
+<style>
+/* 03 label: same size as the 01 and 02 labels */
+#p1-solution .solution-heading .eyebrow {
+  font-size: 30px;
+  letter-spacing: .20em;
+}
+
+/* Smart Trolley cards: 2 columns, same look as the problem cards */
+.solution-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+.solution-cards .problem-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: auto;
+}
+.solution-cards .problem-card > p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.75;
+}
+.solution-cards .problem-detail { display: block; }
+.solution-cards .problem-detail strong { display: block; margin-bottom: 6px; }
+.solution-cards .impact-line { margin-top: auto; }
+
+@media (max-width: 900px) {
+  .solution-cards { grid-template-columns: minmax(0, 1fr); }
+  #p1-solution .solution-heading .eyebrow { font-size: 20px; letter-spacing: .12em; }
+}
+</style>
+
+<div class="solution-heading">
+  <p class="eyebrow">03 / Proposed solution</p>
+  <h3>Meet the <em>Smart Trolley.</em></h3>
+  <p>The Smart Trolley is a shopping trolley with built-in item detection and a simple screen. Shoppers put items straight into the trolley, and it detects each one, shows its price, and keeps a running total. At the end, shoppers review their list, confirm it, and pay at an AEON self-checkout kiosk by scanning a barcode generated by the trolley. It removes the item-by-item scanning, keeps the bill visible, and is designed to be easy for everyone to understand.</p>
+</div>
+
+<h4 class="flow-title">Smart Trolley Steps</h4>
+<div class="flow-strip" aria-label="Smart Trolley steps">
+  <span class="flow-step"><i>1</i> Put items in</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step"><i>2</i> Review the list</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step"><i>3</i> Confirm checkout</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step"><i>4</i> Scan barcode and pay</span>
+</div>
+
+<div class="solution-cards">
+
+  <!-- 01 -->
+  <article class="problem-card problem-card-lime">
+    <div class="problem-card-top"><span class="problem-number">01</span></div>
+    <p class="eyebrow">Smart Trolley feature</p>
+    <h4>Automatic item<br />detection and price</h4>
+    <p>Customers put items directly into the Smart Trolley. The trolley detects each item automatically and displays its price on the screen, so nobody has to scan products one by one.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 1 · Usability problem 4</span></div>
+    <div class="impact-line"><b>Benefit</b> Less manual work, less waiting, and less mental effort to keep track of what has been scanned.</div>
+  </article>
+
+  <!-- 02 -->
+  <article class="problem-card problem-card-peach">
+    <div class="problem-card-top"><span class="problem-number">02</span></div>
+    <p class="eyebrow">Smart Trolley feature</p>
+    <h4>Automatic<br />running total</h4>
+    <p>The system calculates the total price of everything in the trolley and updates it every time an item is added. Customers can see how much they have spent at any moment while they shop.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 4</span></div>
+    <div class="impact-line"><b>Benefit</b> Shoppers can stay within their budget and feel confident about their final bill.</div>
+  </article>
+
+  <!-- 03 -->
+  <article class="problem-card problem-card-blue">
+    <div class="problem-card-top"><span class="problem-number">03</span></div>
+    <p class="eyebrow">Smart Trolley feature</p>
+    <h4>Review and confirm<br />before checkout</h4>
+    <p>When customers press the checkout button, the system generates a complete list of purchased items, shows the total price, and asks for confirmation before going further. This gives customers a chance to check for anything added by mistake.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 2 · Usability problem 4</span></div>
+    <div class="impact-line"><b>Benefit</b> Customers stay in control and know exactly what they are paying for.</div>
+  </article>
+
+  <!-- 04 -->
+  <article class="problem-card problem-card-lime">
+    <div class="problem-card-top"><span class="problem-number">04</span></div>
+    <p class="eyebrow">Smart Trolley feature</p>
+    <h4>Pay at the kiosk with<br />a trolley barcode</h4>
+    <p>Customers pay at a self-checkout kiosk by scanning a barcode generated by the trolley. The shopper does not scan each product again at the kiosk, so the kiosk stays free for the next customer sooner.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 1</span></div>
+    <div class="impact-line"><b>Benefit</b> A shorter time at the kiosk and a shorter queue behind it.</div>
+  </article>
+
+  <!-- 05 -->
+  <article class="problem-card problem-card-peach">
+    <div class="problem-card-top"><span class="problem-number">05</span></div>
+    <p class="eyebrow">Smart Trolley feature</p>
+    <h4>Translation options<br />in different languages</h4>
+    <p>The system offers translation options so shoppers can read the screen in the language they are most comfortable with, instead of being limited to the languages on the current kiosk.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 3</span></div>
+    <div class="impact-line"><b>Benefit</b> Shoppers with language barriers can understand each step and avoid wrong actions.</div>
+  </article>
+
+  <!-- 06 -->
+  <article class="problem-card problem-card-blue">
+    <div class="problem-card-top"><span class="problem-number">06</span></div>
+    <p class="eyebrow">Smart Trolley feature</p>
+    <h4>Friendly interface for<br />elderly customers</h4>
+    <p>The interface uses larger text, bigger buttons, and simple instructions, so elderly customers and first-time users can follow each step without feeling lost.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 3</span></div>
+    <div class="impact-line"><b>Benefit</b> Older and less experienced shoppers can use the system confidently and independently.</div>
+  </article>
+
+</div>
 
         <div class="users-section" id="p1-users">
           <div class="subsection-heading"><p class="eyebrow">04 / Target users</p><h3>Designed around<br /><em>real differences.</em></h3><p>These groups are specific shoppers who may use a self-checkout differently. We will validate the needs through observation and feedback.</p></div>
