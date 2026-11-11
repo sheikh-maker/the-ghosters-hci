@@ -240,28 +240,8 @@
 @media(max-width:560px){.team-photo-slots{grid-template-columns:minmax(0,1fr)}.team-photo-slots .evidence-photo img{height:auto;max-height:78vh;min-height:0;object-fit:contain}}
 @media(max-width:760px){.photo-slots{grid-template-columns:minmax(0,1fr)}.evidence-photo img{height:230px}.group-photo-card{min-height:0;padding:22px!important}.group-photo-image{aspect-ratio:1.7/1}}
 
-/* ===== Bigger "01 / Problem space" section ===== */
-#p1-context.subsection-heading {
-  max-width: 100000px;
-}
-
+/* ===== Slightly bigger "01 / Problem space" label ===== */
 #p1-context .eyebrow {
   font-size: 14px;
   letter-spacing: .18em;
-}
-
-#p1-context h3 {
-  font-size: clamp(48px, 7.5vw, 104px);
-}
-
-#p1-context > p:last-child {
-  max-width: 820px;
-  font-size: 18px;
-  line-height: 1.85;
-}
-
-@media (max-width: 760px) {
-  #p1-context > p:last-child {
-    font-size: 16px;
-  }
 }
