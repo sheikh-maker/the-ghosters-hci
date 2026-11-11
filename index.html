@@ -385,17 +385,6 @@
   </div> <!-- closes ux-photo-list -->
 </div> <!-- closes ux-section -->
         
-    <!-- ============================================================
-     In index.html, inside <div class="solution-section" id="p1-solution">:
-     REPLACE only these two blocks:
-        <div class="solution-heading"> ... </div>
-        <div class="solution-map"> ... </div>
-     with everything below (from the <style> to the last </div>).
-
-     Keep the line  <div class="solution-section" id="p1-solution">  and everything
-     after the solution-map (the prototype-intro, kiosk-demo and caption) as it is.
-     See my note in the chat about the GraceMarketMate prototype.
-     ============================================================ -->
 
 <style>
 /* 03 label: same size as the 01 and 02 labels */
@@ -507,14 +496,99 @@
 
 </div>
 
-        <div class="users-section" id="p1-users">
-          <div class="subsection-heading"><p class="eyebrow">04 / Target users</p><h3>Designed around<br /><em>real differences.</em></h3><p>These groups are specific shoppers who may use a self-checkout differently. We will validate the needs through observation and feedback.</p></div>
-          <div class="user-cards">
-            <article class="user-card"><span class="user-number">01</span><div class="user-symbol" aria-hidden="true">♿</div><h4>Wheelchair users<br />and people with limited reach</h4><p>Reach layout groups key basket actions in a full-width lower panel with larger controls. Stores should pair the interface with an adjustable, tilting display where possible, then validate reach through observation with wheelchair users.</p><span class="user-benefit">Reach · independence · feedback</span></article>
-            <article class="user-card"><span class="user-number">02</span><div class="user-symbol" aria-hidden="true">◉</div><h4>Older adults and<br />people with low vision</h4><p>Larger type, strong contrast, distinct touch controls, and optional spoken prompts can make product details and checkout steps easier to perceive.</p><span class="user-benefit">Legibility · narrator · confidence</span></article>
-            <article class="user-card"><span class="user-number">03</span><div class="user-symbol" aria-hidden="true">↗</div><h4>First-time and occasional<br />self-checkout users</h4><p>Simple instructions, visible progress, and direct basket recovery help shoppers who do not already know where each control lives.</p><span class="user-benefit">Learnability · recovery · clarity</span></article>
-          </div>
-        </div>
+    <!-- ============================================================
+     In index.html, replace the whole block
+        <div class="users-section" id="p1-users"> ... </div>
+     (the one with the three user-card articles) with everything below.
+     It is the block right before <div class="sustainability-section">.
+     ============================================================ -->
+
+<style>
+/* 04 label: same size as the 01, 02 and 03 labels */
+#p1-users .subsection-heading .eyebrow {
+  font-size: 30px;
+  letter-spacing: .20em;
+}
+
+/* Target user cards: 2 columns, same look as the problem and solution cards */
+.target-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+.target-cards .problem-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: auto;
+}
+.target-cards .problem-card > p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.75;
+}
+.target-cards .problem-detail { display: block; }
+.target-cards .problem-detail strong { display: block; margin-bottom: 6px; }
+.target-cards .impact-line { margin-top: auto; }
+
+@media (max-width: 900px) {
+  .target-cards { grid-template-columns: minmax(0, 1fr); }
+  #p1-users .subsection-heading .eyebrow { font-size: 20px; letter-spacing: .12em; }
+}
+</style>
+
+<div class="users-section" id="p1-users">
+  <div class="subsection-heading">
+    <p class="eyebrow">04 / Target users</p>
+    <h3>Designed around<br /><em>real differences.</em></h3>
+    <p>These are the shoppers who use the AEON self-checkout in different ways, and who we expect to benefit most from the Smart Trolley. We will check these needs through observation and feedback.</p>
+  </div>
+
+  <div class="target-cards">
+
+    <!-- 01 -->
+    <article class="problem-card problem-card-lime">
+      <div class="problem-card-top"><span class="problem-number">01</span></div>
+      <p class="eyebrow">Target user</p>
+      <h4>Supermarket customers who<br />prefer self-service shopping</h4>
+      <p>These shoppers like to shop and check out on their own, without waiting for a cashier. They choose self-service to save time, so a slow kiosk, a long queue, or needing staff for a small mistake works against what they want.</p>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 1 · Usability problem 2</span></div>
+      <div class="impact-line"><b>How the Smart Trolley helps</b> Items are detected automatically and payment is done by scanning one barcode, so self-service really is faster.</div>
+    </article>
+
+    <!-- 02 -->
+    <article class="problem-card problem-card-peach">
+      <div class="problem-card-top"><span class="problem-number">02</span></div>
+      <p class="eyebrow">Target user</p>
+      <h4>Customers from different<br />language backgrounds</h4>
+      <p>Shoppers in Malaysia come from many language backgrounds. If the kiosk screen is not in a language they are comfortable with, they may not understand the instructions and may press the wrong option or ask for help.</p>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 3</span></div>
+      <div class="impact-line"><b>How the Smart Trolley helps</b> Translation options let shoppers read each step in the language they prefer.</div>
+    </article>
+
+    <!-- 03 -->
+    <article class="problem-card problem-card-blue">
+      <div class="problem-card-top"><span class="problem-number">03</span></div>
+      <p class="eyebrow">Target user</p>
+      <h4>Budget-conscious shoppers who<br />want to monitor their spending</h4>
+      <p>These shoppers want to know how much they are spending while they shop. When prices and totals are only clear at the end, they worry about going over budget, or about being charged twice for the same item.</p>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 4</span></div>
+      <div class="impact-line"><b>How the Smart Trolley helps</b> Each item's price and a running total are always on the screen, and the full list is shown for confirmation before checkout.</div>
+    </article>
+
+    <!-- 04 -->
+    <article class="problem-card problem-card-lime">
+      <div class="problem-card-top"><span class="problem-number">04</span></div>
+      <p class="eyebrow">Target user</p>
+      <h4>Elderly customers who need a<br />simple, easy-to-use interface</h4>
+      <p>Elderly customers may find small text, small buttons, and many steps on a screen hard to use. If the kiosk feels like it was not made for them, they may avoid it or depend on staff.</p>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 3</span></div>
+      <div class="impact-line"><b>How the Smart Trolley helps</b> Larger text, bigger buttons, and simple instructions make each step easier to see and follow.</div>
+    </article>
+
+  </div>
+</div>
 
        <div class="sustainability-section">
           <div><p class="eyebrow">05 / Sustainability connection</p><h3>Inclusion is part of<br /><em>good design.</em></h3><p>Our contribution is a design proposal, not a measured sustainability outcome. The cards link to Universiti Teknologi Malaysia's SDG and ESG commitments to explain why the project is relevant.</p></div>
