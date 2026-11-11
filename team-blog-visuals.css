@@ -268,3 +268,7 @@
     display: none;
   }
 }
+/* SDG 9 card accent */
+.sdg-card.sdg-9 {
+  border-color: #e08a3c;
+}
