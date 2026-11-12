@@ -398,17 +398,18 @@
 }
 
 .ux-photo-card figure {
+  width: 100%;
   margin: 0;
+  overflow: hidden;
   background: #e8e6df;
-  display: grid;
-  place-items: center;
 }
 
 .ux-photo-card img {
   display: block;
   width: 100%;
-  height: 150px;          /* make smaller/bigger here */
-  object-fit: contain;    /* use "cover" if you want it to fill the box */
+  height: 245px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .ux-photo-text {
@@ -473,6 +474,7 @@
   }
 
   .ux-photo-card img {
-    height: 180px;
+    height: 280px;
   }
 }
+
