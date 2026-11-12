@@ -112,7 +112,7 @@
       <section class="section project-one" id="project-1" aria-labelledby="p1-title">
         <div class="p1-hero">
           <div class="p1-title-wrap"><p class="eyebrow"><span class="eyebrow-dot"></span> Project 1 · Proposal</p><h2 id="p1-title">Checkout should<br />work for <em>everyone.</em></h2></div>
-          <div class="p1-intro"><span class="p1-index">01</span><p>Self-checkout kiosks are meant to make shopping faster, but many shoppers still get stuck, confused or frustrated at the very last step of their visit. For this project, our group focuses on the self-checkout kiosk at AEON supermarkets in Malaysia. Under the theme of Cognitive/Emotion-Adaptive Interaction, we propose AEON GraceMarketMate, a kiosk that notices when a shopper is struggling and adapts its guidance and help in real time. This post sets out the problems we found, our proposed solution, and the users who would benefit most.</p><a class="text-link" href="#p1-problems">See what gets in the way <span aria-hidden="true">↓</span></a></div>
+          <div class="p1-intro"><span class="p1-index">01</span><p>Self-checkout kiosks are meant to make shopping faster, but many shoppers still get stuck, confused or frustrated at the very last step of their visit. For this project, our group focuses on self-checkout at AEON supermarkets in Malaysia. Under the theme of Cognitive/Emotion-Adaptive Interaction, we propose AEON GraceMarketMate: a smart-trolley concept paired with the self-checkout kiosk. It keeps item information visible and offers clear, adaptive guidance through shopping and payment. This post sets out the problems we found, our proposed solution, and the users who would benefit most.</p><a class="text-link" href="#p1-problems">See what gets in the way <span aria-hidden="true">↓</span></a></div>
         </div>
 
 
@@ -131,96 +131,76 @@
 
 <div class="problem-grid problem-grid-four">
 
-  <!-- 01 -->
+    <!-- 01 -->
   <article class="problem-card problem-card-lime">
     <div class="problem-card-top"><span class="problem-number">01</span></div>
-    <p class="eyebrow">Aspect · Emotional and cognitive</p>
-    <h4>Long queue during checkout<br />because of scanning items</h4>
-    <p>Customers may feel frustrated, stressed, or impatient in a long queue, especially during peak hours. Waiting gets longer when customers scan items one by one or run into scanning errors. They must also scan each product, check the displayed information, and make sure every item was registered, which needs continuous attention and causes high cognitive workload.</p>
+    <p class="eyebrow">Aspect · Cognitive and emotional</p>
+    <h4>Long queues during checkout<br />because items are scanned one by one</h4>
+    <p>At a conventional self-checkout, shoppers scan each product separately, then check the screen and bag their items. Scanning and correcting errors one item at a time can slow each transaction, extend the queue, and make shoppers feel rushed.</p>
     <div class="problem-detail"><strong>Design principles violated</strong>
-      <ul>
-        <li><b>Efficiency:</b> the checkout takes longer than necessary.</li>
-        <li><b>User control:</b> customers have limited control over the waiting time.</li>
-        <li><b>Feedback:</b> customers may not know how long checkout will take.</li>
-        <li><b>Recognition rather than recall:</b> customers must remember which products are already scanned.</li>
-        <li><b>Simplicity:</b> the process has multiple manual steps that could be simplified.</li>
+      <ul><li><b>Efficiency:</b> repeated manual scanning adds time to checkout.</li><li><b>Feedback:</b> unclear scan confirmation can make shoppers repeat an action.</li><li><b>Simplicity:</b> a long sequence of individual scans adds avoidable steps.</li>
       </ul>
     </div>
     <div class="problem-detail"><strong>Usability goals affected</strong>
-      <ul>
-        <li><b>Efficiency:</b> customers cannot finish their shopping quickly.</li>
-        <li><b>Satisfaction:</b> long waits lead to frustration and a negative experience.</li>
-        <li><b>Cognitive workload:</b> constant checking keeps mental effort high.</li>
+      <ul><li><b>Efficiency:</b> shoppers may wait longer to reach an available kiosk.</li><li><b>Satisfaction:</b> long queues can create frustration and pressure.</li><li><b>Effectiveness:</b> rushing can lead to missed or duplicate scans.</li>
       </ul>
     </div>
-    <div class="impact-line"><b>How RFID solves it</b> Products are detected automatically when placed in the trolley, so there is less manual interaction and less mental workload.</div>
+    <div class="problem-detail"><strong>Affected users</strong><span>Shoppers during busy periods, including people who prefer self-service but want a quicker checkout.</span></div>
+    <div class="impact-line"><b>How the Smart Trolley helps</b> Items are detected as they are placed in the trolley. Shoppers review the running list and scan one checkout barcode, reducing item-by-item scanning at the kiosk.</div>
   </article>
 
   <!-- 02 -->
-  <article class="problem-card problem-card-peach">
+  <article class="problem-card problem-card-blue">
     <div class="problem-card-top"><span class="problem-number">02</span></div>
     <p class="eyebrow">Aspect · Cognitive and emotional</p>
-    <h4>Difficulty removing<br />accidentally scanned items</h4>
-    <p>Customers may scan or add the same item twice. To remove the extra item, the self-checkout kiosk may need staff assistance or approval. This interrupts checkout and makes customers feel frustrated, especially when other customers are waiting in the queue.</p>
+    <h4>Difficulty understanding<br />self-checkout instructions</h4>
+    <p>Shoppers may be unsure what to do next when instructions, item status, and payment choices are difficult to interpret. Unfamiliar wording or limited language options can lead to misunderstood steps, hesitation, or requests for help.</p>
     <div class="problem-detail"><strong>Design principles violated</strong>
-      <ul>
-        <li><b>User control:</b> customers cannot correct their own mistakes.</li>
-        <li><b>Error recovery:</b> there is no easy way to fix an accidental item entry.</li>
-        <li><b>Feedback:</b> customers may not get clear instructions on how to remove the unwanted item.</li>
+      <ul><li><b>Simplicity:</b> unclear or dense instructions make the next action hard to identify.</li><li><b>Visibility and feedback:</b> the screen should clearly show what happened and what to do next.</li><li><b>Recognition rather than recall:</b> shoppers should not need to remember instructions from earlier screens.</li>
       </ul>
     </div>
     <div class="problem-detail"><strong>Usability goals affected</strong>
-      <ul>
-        <li><b>Efficiency:</b> waiting for staff increases checkout time.</li>
-        <li><b>Effectiveness:</b> customers may struggle to correct their shopping list accurately.</li>
-        <li><b>Satisfaction:</b> waiting for help causes frustration and dissatisfaction.</li>
+      <ul><li><b>Learnability:</b> first-time users may need extra time to understand the process.</li><li><b>Effectiveness:</b> misunderstood steps can interrupt or prevent checkout.</li><li><b>Satisfaction:</b> uncertainty can make self-service feel stressful.</li>
       </ul>
     </div>
-    <div class="impact-line"><b>How the new system solves it</b> The trolley shows a real-time list of detected items. Customers can review it and remove accidental or duplicate items on the trolley screen, and the total price updates automatically. For security, unusual removals can be flagged for staff verification.</div>
+    <div class="problem-detail"><strong>Affected users</strong><span>Shoppers using a language they are less comfortable with, first-time users, and people who prefer clear step-by-step guidance.</span></div>
+    <div class="impact-line"><b>How the Smart Trolley helps</b> The trolley offers simple step-by-step instructions, clear confirmation after item detection, language choices, and larger text and buttons.</div>
   </article>
 
   <!-- 03 -->
-  <article class="problem-card problem-card-blue">
+  <article class="problem-card problem-card-lime">
     <div class="problem-card-top"><span class="problem-number">03</span></div>
-    <p class="eyebrow">Aspect · Cognitive</p>
-    <h4>Difficulty understanding the<br />self-checkout instructions</h4>
-    <p>Some customers struggle to understand the instructions on the self-checkout screen, particularly if they are unfamiliar with the system or have language barriers.</p>
+    <p class="eyebrow">Aspect · Emotional and financial</p>
+    <h4>Fear of being<br />overcharged</h4>
+    <p>When the item list and prices are difficult to check, shoppers may worry that an item was counted twice, has the wrong price, or pushed the total beyond their budget. Seeing the total only at the end can make it harder to spot a problem early.</p>
     <div class="problem-detail"><strong>Design principles violated</strong>
-      <ul>
-        <li><b>Simplicity:</b> instructions may use complicated wording or show too much information, so customers are unsure what to do next.</li>
-        <li><b>Recognition rather than recall:</b> customers may have to remember instructions from earlier screens while doing later steps, which is hard for first-time users.</li>
+      <ul><li><b>Visibility:</b> individual prices and the running total should stay easy to see.</li><li><b>Feedback:</b> the system should confirm each detected item and price change.</li><li><b>User control:</b> shoppers need a chance to review the bill before paying.</li>
       </ul>
     </div>
     <div class="problem-detail"><strong>Usability goals affected</strong>
-      <ul>
-        <li><b>Learnability:</b> customers unfamiliar with self-checkout or facing language barriers take longer to understand the process.</li>
-        <li><b>Effectiveness:</b> if instructions are misunderstood, customers may do the wrong action, skip a step, or fail to complete checkout.</li>
+      <ul><li><b>Effectiveness:</b> shoppers need to verify the bill matches the items they chose.</li><li><b>Satisfaction:</b> a clear, reviewable total supports confidence in payment.</li><li><b>Utility:</b> a live total helps shoppers manage their budget while shopping.</li>
       </ul>
     </div>
-    <div class="problem-detail"><strong>Affected users</strong><span>Shoppers with language barriers or limited experience with technology.</span></div>
-    <div class="impact-line"><b>Proposed solution</b> Simple instructions, clear icons, and multilingual options on the trolley screen.</div>
+    <div class="problem-detail"><strong>Affected users</strong><span>Budget-conscious shoppers and anyone who wants to verify their purchases before paying.</span></div>
+    <div class="impact-line"><b>How the Smart Trolley helps</b> The screen shows every detected item, its price, and the updated total. Before checkout, shoppers can review the complete list and confirm the amount.</div>
   </article>
 
   <!-- 04 -->
-  <article class="problem-card problem-card-lime">
+  <article class="problem-card problem-card-peach">
     <div class="problem-card-top"><span class="problem-number">04</span></div>
-    <p class="eyebrow">Aspect · Emotional</p>
-    <h4>Fear of<br />being overcharged</h4>
-    <p>Customers may worry that an item was scanned twice or that the displayed price is wrong. This reduces their confidence in the self-checkout system.</p>
+    <p class="eyebrow">Aspect · Cognitive and emotional</p>
+    <h4>Difficulty removing an<br />unwanted or duplicate item</h4>
+    <p>If a product is added by mistake or appears twice, shoppers may not find a clear way to remove it themselves. Requiring staff approval interrupts the transaction and can feel stressful while others wait.</p>
     <div class="problem-detail"><strong>Design principles violated</strong>
-      <ul>
-        <li><b>Visibility:</b> customers cannot clearly see whether an item was scanned once or twice, or whether the price is correct, so they are unsure about their final bill.</li>
-        <li><b>Feedback:</b> customers may not get clear confirmation that an item was scanned or added, or that the price updated correctly. The system should respond clearly and immediately after an action or change.</li>
+      <ul><li><b>User control:</b> shoppers should be able to correct an item entry themselves.</li><li><b>Error recovery:</b> the system should make accidental entries easy to undo.</li><li><b>Feedback:</b> the updated list and total should be shown after a removal.</li>
       </ul>
     </div>
     <div class="problem-detail"><strong>Usability goals affected</strong>
-      <ul>
-        <li><b>Effectiveness:</b> if customers cannot verify items and prices, they may pay for duplicates or wrong amounts.</li>
-        <li><b>Satisfaction:</b> customers feel worried or dissatisfied when unsure they are charged correctly. The experience should make them feel confident.</li>
+      <ul><li><b>Effectiveness:</b> shoppers need to correct the list so it matches their basket.</li><li><b>Efficiency:</b> waiting for staff for a routine edit adds time.</li><li><b>Satisfaction:</b> easy recovery reduces frustration and embarrassment.</li>
       </ul>
     </div>
-    <div class="problem-detail"><strong>Affected users</strong><span>Busy shoppers and shoppers unfamiliar with self-service technology.</span></div>
-    <div class="impact-line"><b>Proposed solution</b> The Smart Shopping Trolley displays each detected item, its individual price, and the running total, so customers can review their purchases before confirming checkout.</div>
+    <div class="problem-detail"><strong>Affected users</strong><span>Shoppers who make an accidental selection or need to correct an item before checkout.</span></div>
+    <div class="impact-line"><b>How the Smart Trolley helps</b> Shoppers can edit or remove an item directly from the trolley list before confirming checkout. The total updates immediately; staff help remains available when an item needs verification.</div>
   </article>
 
 </div>
@@ -312,7 +292,7 @@
 
   <div class="ux-photo-list">
 
-    <!-- Card 1 : Usability 1 -->
+    <!-- Card 1 : Usability problem 1 -->
     <article class="ux-photo-card">
       <figure>
         <img src="assets/field/aeon-self-checkout-station.png" alt="People queuing at the AEON self-checkout stations" loading="lazy" />
@@ -326,59 +306,59 @@
       </div>
     </article>
 
-    <!-- Card 2 : Usability 1 and 4 -->
+    <!-- Card 2 : Usability problem 1 and Usability problem 3 -->
     <article class="ux-photo-card">
       <figure>
         <img src="assets/field/aeon-checkout-queue-overview.png" alt="Wide view of a busy AEON checkout area with a queue" loading="lazy" />
       </figure>
       <div class="ux-photo-text">
-        <p class="ux-tags"><a href="#p1-problems">Usability problem 1</a><a href="#p1-problems">Usability problem 4</a></p>
+        <p class="ux-tags"><a href="#p1-problems">Usability problem 1</a><a href="#p1-problems">Usability problem 3</a></p>
         <h4>Scanning one by one, and checking the bill</h4>
         <p><b>What we see.</b> Shoppers scan their items one by one, so each kiosk takes a long time and the queue keeps growing.</p>
         <p><b>What the shopper feels.</b> Because every item is scanned by hand, shoppers keep double-checking the screen to make sure nothing was scanned twice and that they have not overspent. This adds worry on top of the waiting.</p>
-        <p class="ux-link-note">Reflects: long queue (1) and fear of being overcharged (4).</p>
+        <p class="ux-link-note">Reflects: long queue (1) and fear of being overcharged (3).</p>
       </div>
     </article>
 
-    <!-- Card 3 : Usability 2 -->
+    <!-- Card 3 : Usability problem 4 -->
     <article class="ux-photo-card">
       <figure>
         <img src="assets/field/aeon-shopper-interaction.png" alt="A shopper interacting with an AEON self-checkout screen" loading="lazy" />
       </figure>
       <div class="ux-photo-text">
-        <p class="ux-tags"><a href="#p1-problems">Usability problem 2</a></p>
+        <p class="ux-tags"><a href="#p1-problems">Usability problem 4</a></p>
         <h4>Needing staff to delete an item</h4>
         <p><b>What we see.</b> A shopper uses the touchscreen. If an item is scanned by mistake, the shopper cannot delete it alone and must call staff for help.</p>
         <p><b>What the shopper feels.</b> Frustrated and a little embarrassed, because they have to wait for assistance while other shoppers are waiting behind them.</p>
-        <p class="ux-link-note">Reflects: difficulty removing accidentally scanned items.</p>
+        <p class="ux-link-note">Reflects: difficulty removing an unwanted or duplicate item (problem 4).</p>
       </div>
     </article>
 
-    <!-- Card 4 : Usability 3 -->
+    <!-- Card 4 : Usability problem 2 -->
     <article class="ux-photo-card">
       <figure>
         <img src="assets/field/aeon-payment-options.png" alt="Payment method choices on an AEON self-checkout screen" loading="lazy" />
       </figure>
       <div class="ux-photo-text">
-        <p class="ux-tags"><a href="#p1-problems">Usability problem 3</a></p>
+        <p class="ux-tags"><a href="#p1-problems">Usability problem 2</a></p>
         <h4>Unclear payment screen</h4>
         <p><b>What we see.</b> Several payment choices appear together, and the screen does not clearly show which items the shopper has already scanned.</p>
         <p><b>What the shopper feels.</b> A bit confused. They are unsure which items they have scanned and which they have not scanned.</p>
-        <p class="ux-link-note">Reflects: difficulty understanding the self-checkout instructions.</p>
+        <p class="ux-link-note">Reflects: difficulty understanding self-checkout instructions (problem 2).</p>
       </div>
     </article>
 
-    <!-- Card 5 : Usability 3 -->
+    <!-- Card 5 : Usability problem 2 -->
     <article class="ux-photo-card">
       <figure>
         <img src="assets/field/aeon-language-welcome-screen.png" alt="AEON self-checkout welcome screen with Malay and English language choices" loading="lazy" />
       </figure>
       <div class="ux-photo-text">
-        <p class="ux-tags"><a href="#p1-problems">Usability problem 3</a></p>
+        <p class="ux-tags"><a href="#p1-problems">Usability problem 2</a></p>
         <h4>Language barrier at the start</h4>
         <p><b>What we see.</b> The welcome screen offers only Bahasa Malaysia and English before the shopper begins.</p>
         <p><b>What the shopper feels.</b> Lost and unsure. A shopper who is not comfortable in these languages may not understand the checkout steps that follow.</p>
-        <p class="ux-link-note">Reflects: difficulty understanding the self-checkout instructions.</p>
+        <p class="ux-link-note">Reflects: difficulty understanding self-checkout instructions (problem 2).</p>
       </div>
     </article>
 
@@ -440,7 +420,7 @@
     <p class="eyebrow">Smart Trolley feature</p>
     <h4>Automatic item<br />detection and price</h4>
     <p>Customers put items directly into the Smart Trolley. The trolley detects each item automatically and displays its price on the screen, so nobody has to scan products one by one.</p>
-    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 1 · Usability problem 4</span></div>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 1</span></div>
     <div class="impact-line"><b>Benefit</b> Less manual work, less waiting, and less mental effort to keep track of what has been scanned.</div>
   </article>
 
@@ -450,7 +430,7 @@
     <p class="eyebrow">Smart Trolley feature</p>
     <h4>Automatic<br />running total</h4>
     <p>The system calculates the total price of everything in the trolley and updates it every time an item is added. Customers can see how much they have spent at any moment while they shop.</p>
-    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 4</span></div>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 3</span></div>
     <div class="impact-line"><b>Benefit</b> Shoppers can stay within their budget and feel confident about their final bill.</div>
   </article>
 
@@ -458,9 +438,9 @@
   <article class="problem-card problem-card-blue">
     <div class="problem-card-top"><span class="problem-number">03</span></div>
     <p class="eyebrow">Smart Trolley feature</p>
-    <h4>Review and confirm<br />before checkout</h4>
-    <p>When customers press the checkout button, the system generates a complete list of purchased items, shows the total price, and asks for confirmation before going further. This gives customers a chance to check for anything added by mistake.</p>
-    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 2 · Usability problem 4</span></div>
+    <h4>Review, edit and confirm<br />before checkout</h4>
+    <p>When customers press the checkout button, the system generates a complete list of purchased items, shows the total price, and asks for confirmation before going further. Customers can edit or remove unwanted or duplicate items from the list; the total updates before they confirm.</p>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 3 · Usability problem 4</span></div>
     <div class="impact-line"><b>Benefit</b> Customers stay in control and know exactly what they are paying for.</div>
   </article>
 
@@ -480,7 +460,7 @@
     <p class="eyebrow">Smart Trolley feature</p>
     <h4>Translation options<br />in different languages</h4>
     <p>The system offers translation options so shoppers can read the screen in the language they are most comfortable with, instead of being limited to the languages on the current kiosk.</p>
-    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 3</span></div>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 2</span></div>
     <div class="impact-line"><b>Benefit</b> Shoppers with language barriers can understand each step and avoid wrong actions.</div>
   </article>
 
@@ -490,7 +470,7 @@
     <p class="eyebrow">Smart Trolley feature</p>
     <h4>Friendly interface for<br />elderly customers</h4>
     <p>The interface uses larger text, bigger buttons, and simple instructions, so elderly customers and first-time users can follow each step without feeling lost.</p>
-    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 3</span></div>
+    <div class="problem-detail"><strong>Solves</strong><span>Usability problem 2</span></div>
     <div class="impact-line"><b>Benefit</b> Older and less experienced shoppers can use the system confidently and independently.</div>
   </article>
 
@@ -553,7 +533,7 @@
       <p class="eyebrow">Target user</p>
       <h4>Supermarket customers who<br />prefer self-service shopping</h4>
       <p>These shoppers like to shop and check out on their own, without waiting for a cashier. They choose self-service to save time, so a slow kiosk, a long queue, or needing staff for a small mistake works against what they want.</p>
-      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 1 · Usability problem 2</span></div>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 1 · Usability problem 4</span></div>
       <div class="impact-line"><b>How the Smart Trolley helps</b> Items are detected automatically and payment is done by scanning one barcode, so self-service really is faster.</div>
     </article>
 
@@ -563,7 +543,7 @@
       <p class="eyebrow">Target user</p>
       <h4>Customers from different<br />language backgrounds</h4>
       <p>Shoppers in Malaysia come from many language backgrounds. If the kiosk screen is not in a language they are comfortable with, they may not understand the instructions and may press the wrong option or ask for help.</p>
-      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 3</span></div>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 2</span></div>
       <div class="impact-line"><b>How the Smart Trolley helps</b> Translation options let shoppers read each step in the language they prefer.</div>
     </article>
 
@@ -573,7 +553,7 @@
       <p class="eyebrow">Target user</p>
       <h4>Budget-conscious shoppers who<br />want to monitor their spending</h4>
       <p>These shoppers want to know how much they are spending while they shop. When prices and totals are only clear at the end, they worry about going over budget, or about being charged twice for the same item.</p>
-      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 4</span></div>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 3</span></div>
       <div class="impact-line"><b>How the Smart Trolley helps</b> Each item's price and a running total are always on the screen, and the full list is shown for confirmation before checkout.</div>
     </article>
 
@@ -583,7 +563,7 @@
       <p class="eyebrow">Target user</p>
       <h4>Elderly customers who need a<br />simple, easy-to-use interface</h4>
       <p>Elderly customers may find small text, small buttons, and many steps on a screen hard to use. If the kiosk feels like it was not made for them, they may avoid it or depend on staff.</p>
-      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 3</span></div>
+      <div class="problem-detail"><strong>Related problems</strong><span>Usability problem 2</span></div>
       <div class="impact-line"><b>How the Smart Trolley helps</b> Larger text, bigger buttons, and simple instructions make each step easier to see and follow.</div>
     </article>
 
@@ -620,3 +600,4 @@
     <footer class="site-footer"><a class="brand footer-brand" href="#team" aria-label="The Ghosters home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M24 5.5c-9.4 0-16 7.2-16 16.2v17.1c0 1.5 1.8 2.3 2.9 1.2l5.3-5 5.4 5c1.1 1 2.8.3 2.8-1.2v-4.3c0-1.5 1.8-2.2 2.9-1.2l3.4 3.2c1.1 1 2.8.3 2.8-1.2v-3.9c0-1.5 1.8-2.2 2.9-1.2l3.4 3.2c1.1 1 2.8.3 2.8-1.2V21.7C40.6 12.7 33.8 5.5 24 5.5Z" fill="currentColor"/><circle cx="19" cy="21" r="2.3" fill="#20382e"/><circle cx="29" cy="21" r="2.3" fill="#20382e"/><path d="m33 9 9-5-2.1 9.9-2.4-3.3-3.2 2.1L33 9Z" fill="#ef895b"/></svg></span><span>The <b>Ghosters</b></span></a><p>We haunt the bugs, not the users.</p><a href="#main" class="back-top">Back to top ↑</a><small>Human–Computer Interaction · UTM · 2026/27</small></footer>
   </body>
 </html>
+
