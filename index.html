@@ -478,7 +478,41 @@
 
     <!-- ============================================================
      In index.html, replace the whole block
-        <div class="users-section" id="p1-users"> ... </div>
+        
+
+<section class="solution-section" aria-labelledby="try-concept-title">
+  <div class="prototype-intro" id="prototype"><div><p class="eyebrow">Interactive concept · Try it here</p><h3>Try the Smart Trolley<br /><em>with sample items.</em></h3></div><p>Add products, search the catalogue, adjust quantities, remove an item, undo a change, and review the running total. This is a browser concept using sample products; it does not connect to a store or process payment.</p></div>
+          <div class="kiosk-demo" id="kiosk-demo">
+            <div class="kiosk-topbar"><div class="kiosk-brand"><span class="kiosk-mark">GM</span><div><b>Grace MarketMate</b><small>Self-checkout concept</small></div></div><div class="kiosk-tools"><label class="language-label" for="narrator-language">Voice language</label><select id="narrator-language" aria-label="Voice guidance language"><option value="en-US">English</option><option value="ms-MY">Bahasa Melayu</option></select><button class="kiosk-tool" id="contrast-toggle" type="button" aria-pressed="false">◐ <span>Contrast</span></button><button class="kiosk-tool" id="text-toggle" type="button" aria-pressed="false">Aa <span>Text size</span></button><button class="kiosk-tool" id="reach-toggle" type="button" aria-pressed="false">↕ <span>Reach layout</span></button></div></div>
+            <div class="kiosk-progress"><span class="progress-step is-current"><i>1</i> Add items</span><span class="progress-connector"></span><span class="progress-step"><i>2</i> Review basket</span><span class="progress-connector"></span><span class="progress-step"><i>3</i> Checkout</span></div>
+            <div class="kiosk-layout">
+              <section class="catalog-panel" aria-labelledby="catalog-title">
+                <div class="catalog-heading"><div><p class="eyebrow">Step 1 of 3</p><h4 id="catalog-title">Add your items</h4></div><button class="scan-badge" id="sample-scan" type="button"><i></i> Try a sample scan</button></div>
+                <p class="catalog-help" id="kiosk-help">Scan a product or find it below. You can review every item before checkout.</p>
+                <label class="search-label" for="product-search">Find a product</label>
+                <div class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Try “milk” or “banana”" autocomplete="off" /><kbd>⌕</kbd></div>
+                <div class="category-row" aria-label="Product categories"><button class="category-chip is-selected" type="button" data-category="all" aria-pressed="true">All items</button><button class="category-chip" type="button" data-category="produce" aria-pressed="false">Produce</button><button class="category-chip" type="button" data-category="pantry" aria-pressed="false">Pantry</button><button class="category-chip" type="button" data-category="chilled" aria-pressed="false">Chilled</button></div>
+                <div class="product-grid" id="product-grid" aria-label="Sample products"></div>
+                <p class="empty-search" id="empty-search" hidden>No products match that search. Try a different name.</p>
+              </section>
+              <aside class="basket-panel" aria-labelledby="basket-title">
+                <div class="basket-heading"><div><p class="eyebrow">Step 2 · You can edit anytime</p><h4 id="basket-title">Your basket <span class="basket-count" id="basket-count">0</span></h4></div><span class="basket-icon" aria-hidden="true">▧</span></div>
+                <div class="basket-items-list" id="basket-items" aria-live="polite"></div>
+                <div class="basket-empty" id="basket-empty"><span aria-hidden="true">＋</span><b>Your basket is empty</b><small>Add a sample item to see it here.</small></div>
+                <div class="undo-row"><button class="undo-button" id="undo-button" type="button" disabled>↶ Undo last change</button><span id="undo-hint">Nothing to undo</span></div>
+                <div class="basket-total"><span>Estimated total</span><strong id="basket-total">RM 0.00</strong></div>
+                <button class="review-button" id="review-button" type="button">Review basket <span aria-hidden="true">→</span></button>
+                <div class="narrator-row"><button class="narrator-toggle" id="narrator-toggle" type="button" aria-pressed="false"><span class="speaker-icon" aria-hidden="true">◖))</span><span><b>Voice guidance</b><small>Optional · off</small></span><span class="switch" aria-hidden="true"></span></button><button class="repeat-button" id="repeat-button" type="button" aria-label="Read this step aloud">↻</button></div>
+                <p class="kiosk-status" id="kiosk-status" role="status" aria-live="polite">Demo mode · No real checkout or payment</p>
+              </aside>
+            </div>
+            <div class="kiosk-footer"><span>Concept prototype · Sample prices only</span><span>Clear steps. Easy changes. Your pace.</span></div>
+          </div>
+          <p class="prototype-caption">Choose a product to add it to the basket. Edit or remove items on the right, then select <b>Review basket</b>. All prices are examples.</p>
+        </div>
+</section>
+
+<div class="users-section" id="p1-users"> ... </div>
      (the one with the three user-card articles) with everything below.
      It is the block right before <div class="sustainability-section">.
      ============================================================ -->
@@ -600,4 +634,5 @@
     <footer class="site-footer"><a class="brand footer-brand" href="#team" aria-label="The Ghosters home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M24 5.5c-9.4 0-16 7.2-16 16.2v17.1c0 1.5 1.8 2.3 2.9 1.2l5.3-5 5.4 5c1.1 1 2.8.3 2.8-1.2v-4.3c0-1.5 1.8-2.2 2.9-1.2l3.4 3.2c1.1 1 2.8.3 2.8-1.2v-3.9c0-1.5 1.8-2.2 2.9-1.2l3.4 3.2c1.1 1 2.8.3 2.8-1.2V21.7C40.6 12.7 33.8 5.5 24 5.5Z" fill="currentColor"/><circle cx="19" cy="21" r="2.3" fill="#20382e"/><circle cx="29" cy="21" r="2.3" fill="#20382e"/><path d="m33 9 9-5-2.1 9.9-2.4-3.3-3.2 2.1L33 9Z" fill="#ef895b"/></svg></span><span>The <b>Ghosters</b></span></a><p>We haunt the bugs, not the users.</p><a href="#main" class="back-top">Back to top ↑</a><small>Human–Computer Interaction · UTM · 2026/27</small></footer>
   </body>
 </html>
+
 
